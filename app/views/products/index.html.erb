@@ -1,5 +1,7 @@
 <h1>Products</h1>
+<p><%= link_to "Create new product", new_product_url %></p>
 <% @products.each do |product| %>
+  <%= link_to product[:name], product_url(product[:id]) %>
   <p>Name: <%= product[:name] %></p>
   <p>Description: <%= product[:description] %></p>
   <p>Price in cents: <%= product[:price_in_cents] %></p>
